@@ -10,9 +10,10 @@ http.interceptors.request.use(request => {
 })
 http.interceptors.response.use(response => {
     if (response.status === 200) {
-        return response.data
-    } else {
-        throw Error(response)
+        return Promise.resolve(response.data)
     }
+    return response
+}, error => {
+    return Promise.reject(error)
 })
 export default http
