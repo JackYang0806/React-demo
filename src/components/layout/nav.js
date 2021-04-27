@@ -8,7 +8,7 @@ function Nav(props) {
   return (
     <div className="nav-content">
       <ul className="nav-list">
-        {menuList.map((item,index) => {
+        {menuList.map((item, index) => {
           return (
             <li
               key={item.name}
@@ -21,9 +21,11 @@ function Nav(props) {
               className={pathname === item.path ? "active" : ""}
             >
               <Link to={item.path}>{item.name}</Link>
-              {item.children && item.children.length > 0 ? (
+              {item.children && item.children.length > 0 && (
                 <div
-                  className={index===status ? "products-list active" : "products-list"}
+                  className={
+                    index === status ? "products-list active" : "products-list"
+                  }
                 >
                   {item.children.map((ele) => {
                     return (
@@ -35,11 +37,7 @@ function Nav(props) {
                           return (
                             <li key={tag.name}>
                               {tag.name}
-                              {tag.isHot ? (
-                                <span className="hot">HOT</span>
-                              ) : (
-                                ""
-                              )}
+                              {tag.isHot && <span className="hot">HOT</span>}
                             </li>
                           )
                         })}
@@ -48,7 +46,7 @@ function Nav(props) {
                   })}
                   <ul></ul>
                 </div>
-              ) : ''}
+              )}
             </li>
           )
         })}
