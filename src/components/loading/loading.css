@@ -1,0 +1,19 @@
+.loading {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(20, 20, 20, 0.6);
+    z-index: 9999;
+}
+
+.loading-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
