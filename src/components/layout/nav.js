@@ -27,13 +27,13 @@ function Nav(props) {
                     index === status ? "products-list active" : "products-list"
                   }
                 >
-                  {item.children.map((ele) => {
+                  {item.children.map((second) => {
                     return (
-                      <ul key={ele.name}>
+                      <ul key={second.name}>
                         <li>
-                          <span className="title">{ele.name}</span>
+                          <span className="title">{second.name}</span>
                         </li>
-                        {ele.children.map((tag) => {
+                        {second.children.map((tag) => {
                           return (
                             <li key={tag.name}>
                               {tag.name}
