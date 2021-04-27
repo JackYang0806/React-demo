@@ -1,13 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./index.css"
 import reportWebVitals from "./reportWebVitals"
 import { HashRouter } from "react-router-dom"
 import { renderRoutes } from "react-router-config"
 import routes from "@/router"
-
 // 样式
 import "antd/dist/antd.css"
+import "./index.scss"
+
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter> {renderRoutes(routes)} </HashRouter>
