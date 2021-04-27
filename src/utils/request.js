@@ -7,6 +7,8 @@ const http = axios.create({
 })
 http.interceptors.request.use(request => {
     return request
+}, error => {
+    return Promise.reject(error)
 })
 http.interceptors.response.use(response => {
     if (response.status === 200) {
