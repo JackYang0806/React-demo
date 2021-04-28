@@ -1,6 +1,6 @@
 /*
  * @Description: 
- * @Autor: 章造
+ * @Autor: cheung
  */
 const fileNameRE = /^\.\/([^\s]+)\.js$/;
 export function importDistAll(modulesContext) {

@@ -1,10 +1,14 @@
 /*
  * @Description: 
- * @Autor: 章造
+ * @Autor: cheung
  */
 export default [
     {
-        name: 'abc',
-        path: '/case'
+        name: 'case1',
+        path: '/case1'
+    },
+    {
+        name: 'case2',
+        path: '/case2'
     }
 ];
