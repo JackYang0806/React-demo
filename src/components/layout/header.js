@@ -1,11 +1,12 @@
 import React, { useEffect } from "react"
 import { Row, Col, Input, Button } from "antd"
-import { getMenu, queryCases } from "./api"
+import { getMenu } from "./api"
 import logo from "@/assets/images/logo.png"
 import "./header.scss"
-import {connect} from 'react-redux'
-function Header(props) {
-  const { Search } = Input
+import {useDispatch} from 'react-redux'
+function Header() {
+  const { Search } = Input;
+  const dispath=useDispatch();
   useEffect(() => {
     getMenu({
       systemId: "1290815299041501184",
@@ -23,7 +24,7 @@ function Header(props) {
           <Search
             className="keywords"
             enterButton
-            onSearch={(val) => props.searchHandle(val)}
+            onSearch={(val) => dispath({type:"update_keyword",value:val})}
             placeholder="精品协同人事管理"
           ></Search>
           <Button> 政务 </Button> <Button> 注册 </Button>
@@ -33,14 +34,4 @@ function Header(props) {
     </div>
   )
 }
-const updateKeyword=(dispatch)=>{
-  return {
-    searchHandle:(val)=>{
-      dispatch({
-        type:"update_keyword",
-        value:val
-      })
-    }
-  }
-}
-export default connect(null,updateKeyword)(Header)
+export default Header

@@ -1,24 +1,18 @@
-import React, {useState, useEffect } from "react"
+import React, {useState } from "react"
 import { Button } from "antd"
-import { connect } from "react-redux"
-import store from "@/store"
+import { useSelector } from "react-redux"
 function Home() {
-
+  const keyword=useSelector(state=>state.keyword)
   const [word,setWord]=useState('');
   const clickHandle = () => {
-    console.log(store.getState())
+    setWord(keyword)
   }
-
-  useEffect(() => {
-    store.subscribe(() => {
-      setWord(store.getState()['keyword'])
-    })
-  }, [])
+ 
   return (
     <div>
-      <h4> Home from header search input:{word}</h4>
-      <Button onClick={() => clickHandle()}>打印store</Button>
+      <h4> click Button get current keyword:{word}</h4>
+      <Button onClick={() => clickHandle()}>获取keyword</Button>
     </div>
   )
 }
-export default connect()(Home)
+export default Home

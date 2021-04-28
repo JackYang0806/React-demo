@@ -1,6 +1,7 @@
 .nav-content {
     position: relative;
     box-shadow: 3px 4px 4px rgba($color: #cdcdcd, $alpha: .25);
+    z-index: 10;
     .nav-list {
         list-style-type: none;
         padding: 0;
