@@ -3,18 +3,9 @@ import { Row, Col, Input, Button } from "antd"
 import { getMenu, queryCases } from "./api"
 import logo from "@/assets/images/logo.png"
 import "./header.scss"
-
-function Header() {
+import {connect} from 'react-redux'
+function Header(props) {
   const { Search } = Input
-  const searchHandle = (val) => {
-    queryCases({
-      keyword: val,
-      page: 1,
-      size: 4,
-    }).then((res) => {
-      console.log(res)
-    })
-  }
   useEffect(() => {
     getMenu({
       systemId: "1290815299041501184",
@@ -32,7 +23,7 @@ function Header() {
           <Search
             className="keywords"
             enterButton
-            onSearch={(val) => searchHandle(val)}
+            onSearch={(val) => props.searchHandle(val)}
             placeholder="精品协同人事管理"
           ></Search>
           <Button> 政务 </Button> <Button> 注册 </Button>
@@ -42,4 +33,16 @@ function Header() {
     </div>
   )
 }
-export default Header
+const updateKeyword=(dispatch)=>{
+  return {
+    searchHandle:(val)=>{
+      dispatch({
+        type:"update_keyword",
+        value:val
+      })
+    }
+  }
+}
+const Myheader=connect(null,updateKeyword)(Header)
+
+export default Myheader

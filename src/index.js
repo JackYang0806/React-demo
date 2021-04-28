@@ -3,6 +3,8 @@ import ReactDOM from "react-dom"
 import reportWebVitals from "./reportWebVitals"
 import { HashRouter } from "react-router-dom"
 import { renderRoutes } from "react-router-config"
+import store from '@/store'
+import { Provider } from 'react-redux'
 import routes from "@/router"
 // 样式
 import "antd/dist/antd.css"
@@ -10,7 +12,11 @@ import "./index.scss"
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter> {renderRoutes(routes)} </HashRouter>
+    <HashRouter>
+        <Provider store={store}>
+        {renderRoutes(routes)} 
+        </Provider>
+       </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 )
