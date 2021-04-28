@@ -43,6 +43,4 @@ const updateKeyword=(dispatch)=>{
     }
   }
 }
-const Myheader=connect(null,updateKeyword)(Header)
-
-export default Myheader
+export default connect(null,updateKeyword)(Header)

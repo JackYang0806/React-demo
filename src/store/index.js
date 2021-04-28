@@ -19,5 +19,4 @@ function info(state = stateDefaults, action) {
     }
 }
 const store = createStore(info);
-store.subscribe(() => { console.log(store.getState()) })
 export default store
