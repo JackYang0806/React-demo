@@ -1,16 +1,20 @@
 import React, { useEffect } from "react"
 import { Row, Col, Input, Button } from "antd"
-import { getMenu } from "./api"
 import logo from "@/assets/images/logo.png"
 import "./header.scss"
 import {useDispatch} from 'react-redux'
 function Header() {
   const { Search } = Input;
   const dispath=useDispatch();
+  const searchHanlde=(val)=>{
+    // 更新 值到home
+    dispath({type:"update_keyword",value:val});
+    //调用接口
+  }
   useEffect(() => {
-    getMenu({
-      systemId: "1290815299041501184",
-    }).then((res) => {
+    window.$api['common/getmenu']({
+      data:{systemId: "1290815299041501184"}
+    }).then(res=>{
       console.log(res)
     })
   }, [])
@@ -24,7 +28,7 @@ function Header() {
           <Search
             className="keywords"
             enterButton
-            onSearch={(val) => dispath({type:"update_keyword",value:val})}
+            onSearch={(val) =>searchHanlde(val)}
             placeholder="精品协同人事管理"
           ></Search>
           <Button> 政务 </Button> <Button> 注册 </Button>

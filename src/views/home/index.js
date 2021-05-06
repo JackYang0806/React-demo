@@ -1,17 +1,11 @@
-import React, {useState } from "react"
-import { Button } from "antd"
+import React from "react"
 import { useSelector } from "react-redux"
-function Home() {
+function Home(props) {
+  console.log(props)
   const keyword=useSelector(state=>state.keyword)
-  const [word,setWord]=useState('');
-  const clickHandle = () => {
-    setWord(keyword)
-  }
- 
   return (
     <div>
-      <h4> click Button get current keyword:{word}</h4>
-      <Button onClick={() => clickHandle()}>获取keyword</Button>
+      <h4 style={{color:'#333',fontSize:'40px'}}> current keyword from header input:{keyword}</h4>
     </div>
   )
 }

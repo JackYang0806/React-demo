@@ -6,7 +6,6 @@ const stateDefaults = {
 }
 
 function info(state = stateDefaults, action) {
-    console.log('run in keyword')
     switch (action.type) {
         case 'update_keyword':
             return Object.assign(state, { 'keyword': action.value });

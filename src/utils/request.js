@@ -6,6 +6,15 @@ const http = axios.create({
     withCredentials: true
 })
 http.interceptors.request.use(request => {
+    // get 增加时间参数 防止缓存
+    if (request.method === 'get') {
+        request.params = {
+            ...request.params,
+            ... {
+                '_t': new Date().getTime()
+            }
+        }
+    }
     return request
 }, error => {
     return Promise.reject(error)

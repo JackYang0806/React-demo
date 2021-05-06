@@ -6,12 +6,14 @@ import { renderRoutes } from "react-router-config"
 import store from '@/store'
 import { Provider } from 'react-redux'
 import routes from "./router"
+import api from '@/plugin/api'
+
 // 样式
 import "antd/dist/antd.css"
 import "./index.scss"
 //文件
 import "@/icons"
-
+window.$api=api;
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
