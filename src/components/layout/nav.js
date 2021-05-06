@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import menuList from "./navdata"
+import SvgIcon from '@/components/svg'
 import "./nav.scss"
 function Nav(props) {
   const { pathname } = props
@@ -31,7 +32,7 @@ function Nav(props) {
                     return (
                       <ul key={second.name}>
                         <li>
-                          <span className="title">{second.name}</span>
+                          <span className="title">{second.icon&&<SvgIcon iconClass={second.icon} />}{second.name}</span>
                         </li>
                         {second.children.map((tag) => {
                           return (

@@ -9,6 +9,7 @@ const menuList = [{
         children: [{
                 name: "中小企业应用",
                 path: "/products/company",
+                icon: "building",
                 children: [
                     { path: "/products/company/1", name: "A6+Clound", isHot: true },
                     { path: "/products/company/1", name: "精品协同人事管理", isHot: true },
@@ -22,6 +23,7 @@ const menuList = [{
             {
                 name: "大型集团解决方案",
                 path: "/products/company",
+                icon: "world",
                 children: [
                     { path: "/products/company/1", name: "A8+协同平台" },
                     { path: "/products/company/1", name: "三重一大" },
@@ -32,6 +34,7 @@ const menuList = [{
             {
                 name: "行业领域云",
                 path: "/products/company",
+                icon: "cloud",
                 children: [
                     { path: "/products/company/1", name: "建筑云" },
                     { path: "/products/company/1", name: "人力薪税云" },
@@ -40,6 +43,7 @@ const menuList = [{
             {
                 name: "工具组件",
                 path: "/products/company",
+                icon: "setting",
                 children: [
                     { path: "/products/company/1", name: "表单模板" },
                     { path: "/products/company/1", name: "组件" },

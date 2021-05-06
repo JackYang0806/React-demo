@@ -5,10 +5,12 @@ import { HashRouter } from "react-router-dom"
 import { renderRoutes } from "react-router-config"
 import store from '@/store'
 import { Provider } from 'react-redux'
-import routes from "@/router"
+import routes from "./router"
 // 样式
 import "antd/dist/antd.css"
 import "./index.scss"
+//文件
+import "@/icons"
 
 ReactDOM.render(
   <React.StrictMode>
