@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Row, Col, Input, Button } from "antd"
+import { Link } from 'react-router-dom'
 import logo from "@/assets/images/logo.png"
 import "./header.scss"
 import {useDispatch} from 'react-redux'
@@ -32,7 +33,7 @@ function Header() {
             placeholder="精品协同人事管理"
           ></Search>
           <Button> 政务 </Button> <Button> 注册 </Button>
-          <Button type="primary"> 登录 </Button>
+          <Link to="/login"><Button type="primary">登录</Button></Link>
         </Col>
       </Row>
     </div>

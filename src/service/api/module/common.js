@@ -8,7 +8,8 @@ export default [{
         path: '/commonapi/menu/mine'
     },
     {
-        name: 'case2',
-        path: '/case2'
+        name: 'captcha',
+        method: "get",
+        path: '/commonapi/captcha/image/get'
     }
 ];
