@@ -6,7 +6,7 @@ import Myheader from '@/components/layout/header'
 import Nav from '@/components/layout/nav'
 const { Header, Content } = Layout
 function App(props) {
-  const { route,location } = props;
+  const { route,location } = props; 
   return (
     <div className="App">
       <Layout>

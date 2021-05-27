@@ -3,10 +3,15 @@ import Login from "@/views/login"
 import Home from "@/views/home"
 import Products from "@/views/products"
 import CustomerCase from "@/views/customerCase"
+import Page404 from '@/views/pages/404'
 const routes = [{
+        path: "/login",
+        component: Login,
+    },
+    {
         path: "/",
-        exact: true,
         component: App,
+        onEnter: ({ params }, replace) => console.log(params),
         routes: [{
                 path: "/home",
                 component: Home,
@@ -20,10 +25,9 @@ const routes = [{
                 component: CustomerCase,
             },
         ]
-    },
-    {
-        path: "/login",
-        component: Login,
+    }, {
+        path: "*",
+        components: Page404
     }
 ]
 export default routes
