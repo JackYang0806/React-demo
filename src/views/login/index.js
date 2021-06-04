@@ -35,7 +35,7 @@ function Login(){
                             <Input placeholder="请输入验证码" size="large" />
                         </Col>
                         <Col span={8} offset={1}>
-                            {url&&<img className="captcha" src={url} onClick={()=>getCaptcha()}/>}
+                            {url&&<img className="captcha" src={url} alt="icon" onClick={()=>getCaptcha()}/>}
                         </Col>
                     </Row>
                 </Form.Item>

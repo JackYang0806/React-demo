@@ -10,9 +10,7 @@ http.interceptors.request.use(request => {
     if (request.method === 'get') {
         request.params = {
             ...request.params,
-            ... {
-                '_t': new Date().getTime()
-            }
+            '_t': new Date().getTime()
         }
     }
     return request

@@ -2,9 +2,8 @@
  * @Description: 
  * @Autor: cheung
  */
-export default [
-    {
-        name: 'proto',
-        path: '/proto'
-    }
-];
+const protoApi = [{
+    name: 'proto',
+    path: '/proto'
+}];
+export default protoApi

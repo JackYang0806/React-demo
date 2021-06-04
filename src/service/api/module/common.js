@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: yangji
  */
-export default [{
+const commonapi = [{
         name: 'getmenu',
         method: "post",
         path: '/commonapi/menu/mine'
@@ -13,3 +13,4 @@ export default [{
         path: '/commonapi/captcha/image/get'
     }
 ];
+export default commonapi

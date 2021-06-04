@@ -2,9 +2,8 @@
  * @Description: 
  * @Autor: cheung
  */
-export default [
-    {
-        name: 'obj',
-        path: '/obj'
-    }
-];
+const objApi = [{
+    name: 'obj',
+    path: '/obj'
+}];
+export default objApi

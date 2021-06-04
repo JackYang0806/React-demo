@@ -11,10 +11,11 @@ const routes = [{
     {
         path: "/",
         component: App,
-        onEnter: ({ params }, replace) => console.log(params),
-        routes: [{
-                path: "/home",
-                component: Home,
+        routes: [
+            {
+                path:"/",
+                exact:true,
+                component:Home
             },
             {
                 path: "/products",
@@ -25,9 +26,9 @@ const routes = [{
                 component: CustomerCase,
             },
         ]
-    }, {
-        path: "*",
-        components: Page404
+    },{
+        path:"*",
+        component:Page404
     }
 ]
 export default routes

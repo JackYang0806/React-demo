@@ -2,8 +2,7 @@
  * @Description: 
  * @Autor: cheung
  */
-export default [
-    {
+const caseApi = [{
         name: 'case1',
         path: '/case1'
     },
@@ -11,4 +10,5 @@ export default [
         name: 'case2',
         path: '/case2'
     }
-];
+]
+export default caseApi

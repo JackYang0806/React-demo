@@ -2,9 +2,8 @@
  * @Description: 
  * @Autor: cheung
  */
-export default [
-    {
-        name: 'test',
-        path: '/test'
-    }
-];
+const testApi = [{
+    name: 'test',
+    path: '/test'
+}];
+export default testApi

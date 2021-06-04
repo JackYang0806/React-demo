@@ -13,11 +13,11 @@ function Header() {
     //调用接口
   }
   useEffect(() => {
-    window.$api['common/getmenu']({
-      data:{systemId: "1290815299041501184"}
-    }).then(res=>{
-      console.log(res)
-    })
+    // window.$api['common/getmenu']({
+    //   data:{systemId: "1290815299041501184"}
+    // }).then(res=>{
+    //   console.log(res)
+    // })
   }, [])
   return (
     <div>
